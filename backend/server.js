@@ -36,6 +36,10 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || "An unknown error occurred" });
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 mongoose
   .connect(
     "mongodb+srv://ejiroosiephri765:EZSSzhMXwRXdnuxA@cluster0.jpwquns.mongodb.net/movix?retryWrites=true&w=majority&appName=Cluster0"
